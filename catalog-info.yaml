@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "platops2-product-infrastructure"
+  description: hello
+  annotations:
+    # This must match folder-name/job-name in Jenkins.
+    jenkins.io/job-full-name: cft:HMCTS_platops2/testing-product-infra
+    github.com/project-slug: 'hmcts-test/testing-product-infra'
+  tags:
+    - terraform
+  links:
+    - url: https://hmcts-reform.slack.com/app_redirect?channel=cloud-native
+      title: cloud-native on Slack
+      icon: chat
+spec:
+  type: service
+  system: platops2
+  lifecycle: experimental
+  owner: dts_platform_operations
